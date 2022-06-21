@@ -6,16 +6,42 @@
     Last Modified: 21, June 2022
 """
 
+#x = horizantal axis
+#y = vertical axis
+     
 
-playing_board=[[0,1,2,3,4,5],
-               [0,1,2,3,4,5],
-               [0,1,2,3,4,5],
-               [0,1,2,3,4,5],
-               [0,1,2,3,4,5],
-               [0,1,2,3,4,5],
-               [0,1,2,3,4,5]
+playing_board=[[" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "],
+               [" ", " ", " ", " ", " ", " "]
                ] 
 
-while True: 
-  for item in playing_board:
-    print(item)
+#test pieces for the board
+playing_board[3][2] = "X"
+playing_board[5][5] = "O"
+
+
+#header containing orientation numbers
+header_nums = " "
+for num in range(0, len(playing_board)):
+    header_nums += "  "+ str(num) +"   "
+print(header_nums)
+print ("|-----" * (len(playing_board)) + "|")
+
+#printing rows
+for row in range(len(playing_board[0])):
+    print("|     " * (len(playing_board) +1))
+    
+    active_row = ""
+    for column in range(len(playing_board)):
+        active_row += ("|  "+str(playing_board[column][row])) + "  "
+    print(active_row + "| " + str(row))
+
+    print("|     " * (len(playing_board) +1))
+    
+    print ("|-----" * (len(playing_board)) + "|")
+    
+    
