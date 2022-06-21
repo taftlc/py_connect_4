@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+""" Script: connect_4.py
+    Desc:  Generate game of connect 4 in console
+    Author: Taft, Luke C. 40498618
+    Last Modified: 21, June 2022
 """
-Created on Tue Jun 21 17:39:13 2022
 
-@author: okitraz
-"""
 
 playing_board=[[0,1,2,3,4,5],
                [0,1,2,3,4,5],
