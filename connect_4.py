@@ -47,7 +47,29 @@ def print_pb(playing_board):
         print("|     " * (len(playing_board) +1))
         
         print ("|-----" * (len(playing_board)) + "|")
+        
+def move_checker(playing_board, move):
+    #error checking for the column existing
+    if move < 1 or move > (len(playing_board)):
+        return False
+   
+    #error checking for the column being full
+    if playing_board[move-1][0] != " ":
+        return False
+    
+    return True
 
+def select_space(playing_board, column, player):
+    #throw it to the move_checker
+    if not move_checker(playing_board, column):
+        print("Moving an " + player + " piece in column " +str(column))
+        print("Make sure to pick a column between 0 and " + str(len(playing_board) - 1) + " that is not full \n")
+        return False
+    
+    
+        
+        
+    
 
 playing_board = make_pb()
 print_pb(playing_board)
